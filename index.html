@@ -2,120 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Make VCam Cheap – We Fight for Freedom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACKCAM - Vision Beyond Control</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      color: #00ffe1;
-      font-family: 'Courier New', Courier, monospace;
+      background: #0f0f0f;
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ff9f;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       overflow: hidden;
-      text-align: center;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0.5em 1em;
-      color: #00ffe1;
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #0ff;
-      max-width: 90%;
+    .glitch {
+      font-size: 3em;
+      position: relative;
+      color: #00ff9f;
     }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      color: #93f9b9;
-      margin: 0.5em;
-      text-shadow: 0 0 8px #00ffcc;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin: 0.4em 1em;
-      color: #b8ffe3;
-      text-shadow: 0 0 8px #00ffe1;
-      background: rgba(0, 255, 255, 0.1);
-      padding: 0.5em 1em;
-      border: 1px solid #00ffe1;
-      border-radius: 6px;
-      max-width: 90%;
-    }
-
-    button {
-      color: #00ffe1;
-      background: transparent;
-      border: 1px solid #00ffe1;
-      font-size: 1.1rem;
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.4rem;
-      border-radius: 6px;
-      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-      text-shadow: 0 0 5px #00ffe1;
-    }
-
-    button:hover {
-      background: #00ffe1;
-      color: black;
-      box-shadow: 0 0 10px #00ffe1;
-    }
-
-    .glow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
-      }
-      50% {
-        text-shadow: 0 0 5px #00bbaa, 0 0 10px #00bbaa;
-      }
-    }
-
-    /* Optional animated glowing grid overlay */
-    .grid-bg {
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to right, rgba(0,255,255,0.05) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(0,255,255,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-      z-index: -1;
-      animation: gridMove 20s linear infinite;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
     }
-
-    @keyframes gridMove {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 40px 40px;
-      }
+    .glitch::before {
+      color: #ff005c;
+      animation: glitch 2s infinite ease-in-out;
+    }
+    .glitch::after {
+      color: #00ffff;
+      animation: glitch2 3s infinite ease-in-out;
+    }
+    @keyframes glitch {
+      0% { transform: translate(1px, -1px); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, 2px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(2px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+    @keyframes glitch2 {
+      0% { transform: translate(-1px, 2px); }
+      20% { transform: translate(2px, -1px); }
+      40% { transform: translate(-2px, 1px); }
+      60% { transform: translate(1px, 1px); }
+      80% { transform: translate(-1px, -2px); }
+      100% { transform: translate(0, 0); }
+    }
+    .terminal-box {
+      background: #111;
+      border: 2px solid #00ff9f;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px #00ff9f66;
+    }
+    .terminal-box p::before {
+      content: '$ ';
+      color: #00ff9f;
+    }
+    .highlight {
+      color: #ff005c;
     }
   </style>
 </head>
 <body>
-  <div class="grid-bg"></div>
-
-  <h1 class="glow">Make VCam Cheap</h1>
-  <h2>We Fight for Wisdomxxxxxx</h2>
-  <p>DM on TG for LIFETIME VCam + Private Server</p>
-  <button onclick="openTelegram()">Contact TG: @K9Daddyyy</button>
-
-  <script>
-    function openTelegram() {
-      window.open("https://t.me/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxK9Daddyyy", "_blank");
-    }
-  </script>
+  <div class="glitch" data-text="BLACKCAM">BLACKCAM</div>
+  <div class="terminal-box">
+    <p>Initializing Android subsystem...</p>
+    <p>Bypassing <span class="highlight">CAM_LOCK</span> protocol...</p>
+    <p>Accessing <span class="highlight">CAMERA_FEED</span> stream...</p>
+    <p>Receiving image packets...</p>
+    <p><span class="highlight">[SUCCESS]</span> Video uplink established.</p>
+  </div>
 </body>
 </html>
