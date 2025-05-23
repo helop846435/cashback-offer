@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEONCORE - Deep Vision</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACKCAM - Vision Beyond Control</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(145deg, #000000 0%, #0e0e0e 100%);
-      font-family: 'Orbitron', sans-serif;
-      color: #00ffe5;
+      background: #0f0f0f;
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ff9f;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       overflow: hidden;
     }
-
-    .neon-frame {
-      border: 2px solid #00ffe5;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 0 20px #00ffe5, 0 0 40px #00ffe5;
-      width: 80%;
-      max-width: 700px;
-    }
-
-    h1 {
+    .glitch {
       font-size: 3em;
-      color: #ff00aa;
-      text-align: center;
-      text-shadow: 0 0 10px #ff00aa;
+      position: relative;
+      color: #00ff9f;
     }
-
-    .status-log {
-      margin-top: 20px;
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #00ff88;
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+    }
+    .glitch::before {
+      color: #ff005c;
+      animation: glitch 2s infinite ease-in-out;
+    }
+    .glitch::after {
+      color: #00ffff;
+      animation: glitch2 3s infinite ease-in-out;
+    }
+    @keyframes glitch {
+      0% { transform: translate(1px, -1px); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, 2px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(2px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+    @keyframes glitch2 {
+      0% { transform: translate(-1px, 2px); }
+      20% { transform: translate(2px, -1px); }
+      40% { transform: translate(-2px, 1px); }
+      60% { transform: translate(1px, 1px); }
+      80% { transform: translate(-1px, -2px); }
+      100% { transform: translate(0, 0); }
+    }
+    .terminal-box {
       background: #111;
+      border: 2px solid #00ff9f;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px #00ff9f66;
     }
-
-    .status-log span {
-      color: #ff0066;
+    .terminal-box p::before {
+      content: '$ ';
+      color: #00ff9f;
+    }
+    .highlight {
+      color: #ff005c;
     }
   </style>
 </head>
 <body>
-  <div class="neon-frame">
-    <h1>NEONCORE</h1>
-    <div class="status-log">
-      <p>Loading Neural Access Protocol...</p>
-      <p>Authenticating biometric access...</p>
-      <p><span>HACK_CAM.ANDROID_MODULE</span> loaded successfully</p>
-      <p>Syncing visual nodes...</p>
-      <p><span>[STREAM ACTIVE]</span> Observing input feed</p>
-    </div>
+  <div class="glitch" data-text="BLACKCAM">BLACKCAM</div>
+  <div class="terminal-box">
+    <p>Initializing Android subsystem...</p>
+    <p>Bypassing <span class="highlight">CAM_LOCK</span> protocol...</p>
+    <p>Accessing <span class="highlight">CAMERA_FEED</span> stream...</p>
+    <p>Receiving image packets...</p>
+    <p><span class="highlight">[SUCCESS]</span> Video uplink established.</p>
   </div>
 </body>
 </html>
