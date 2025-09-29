@@ -1,85 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BLACKCAM - Vision Beyond Control</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background: #0f0f0f;
-      font-family: 'Share Tech Mono', monospace;
-      color: #00ff9f;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .glitch {
-      font-size: 3em;
-      position: relative;
-      color: #00ff9f;
-    }
-    .glitch::before, .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.7;
-    }
-    .glitch::before {
-      color: #ff005c;
-      animation: glitch 2s infinite ease-in-out;
-    }
-    .glitch::after {
-      color: #00ffff;
-      animation: glitch2 3s infinite ease-in-out;
-    }
-    @keyframes glitch {
-      0% { transform: translate(1px, -1px); }
-      20% { transform: translate(-1px, 1px); }
-      40% { transform: translate(1px, 2px); }
-      60% { transform: translate(-1px, -1px); }
-      80% { transform: translate(2px, 1px); }
-      100% { transform: translate(0, 0); }
-    }
-    @keyframes glitch2 {
-      0% { transform: translate(-1px, 2px); }
-      20% { transform: translate(2px, -1px); }
-      40% { transform: translate(-2px, 1px); }
-      60% { transform: translate(1px, 1px); }
-      80% { transform: translate(-1px, -2px); }
-      100% { transform: translate(0, 0); }
-    }
-    .terminal-box {
-      background: #111;
-      border: 2px solid #00ff9f;
-      padding: 20px;
-      width: 80%;
-      max-width: 600px;
-      margin-top: 20px;
-      box-shadow: 0 0 20px #00ff9f66;
-    }
-    .terminal-box p::before {
-      content: '$ ';
-      color: #00ff9f;
-    }
-    .highlight {
-      color: #ff005c;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Kinds of Clickable Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .button-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        /* Basic Button Styles */
+        .basic-btn {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .basic-btn:hover {
+            background-color: #3367d6;
+        }
+        
+        /* Modern Button */
+        .modern-btn {
+            background: linear-gradient(45deg, #4285f4, #34a853);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Outline Button */
+        .outline-btn {
+            background: transparent;
+            color: #4285f4;
+            padding: 10px 20px;
+            border: 2px solid #4285f4;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        /* Icon Button */
+        .icon-btn {
+            background-color: #34a853;
+            color: white;
+            padding: 10px 20px 10px 45px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            position: relative;
+        }
+        .icon-btn::before {
+            content: "🔍";
+            position: absolute;
+            left: 15px;
+        }
+        
+        /* Large Button */
+        .large-btn {
+            background-color: #ea4335;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 18px;
+        }
+        
+        /* Ghost Button */
+        .ghost-btn {
+            background: transparent;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .ghost-btn:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Animated Button */
+        .animated-btn {
+            background-color: #fbbc05;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .animated-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Link styled as button */
+        .link-btn {
+            display: inline-block;
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        /* Image button */
+        .image-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            padding: 0;
+        }
+        .image-btn img {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        
+        /* 3D Button */
+        .btn-3d {
+            background-color: #4285f4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 4px 0 #3367d6;
+            position: relative;
+            top: 0;
+            transition: all 0.1s ease;
+        }
+        .btn-3d:active {
+            top: 4px;
+            box-shadow: 0 0 0 #3367d6;
+        }
+    </style>
 </head>
 <body>
-  <div class="glitch" data-text="BLACKCAM">BLACKCAM</div>
-  <div class="terminal-box">
-    <p>Initializing Android subsystem...</p>
-    <p>Bypassing <span class="highlight">CAM_LOCK</span> protocol...</p>
-    <p>Accessing <span class="highlight">CAMERA_FEED</span> stream...</p>
-    <p>Receiving image packets...</p>
-    <p><span class="highlight">[SUCCESS]</span> Video uplink established.</p>
-  </div>
+    <div class="container">
+        <h1>🎯 All Kinds of Clickable Buttons</h1>
+        <p>All buttons will redirect you to Google when clicked!</p>
+        
+        <!-- Basic Buttons Section -->
+        <div class="button-section">
+            <h2>Basic Buttons</h2>
+            <button class="basic-btn" onclick="redirectToGoogle()">Basic Button</button>
+            <button class="basic-btn" onclick="redirectToGoogle()">Click Me</button>
+            <button class="basic-btn" onclick="redirectToGoogle()">Go to Google</button>
+        </div>
+        
+        <!-- Styled Buttons Section -->
+        <div class="button-section">
+            <h2>Styled Buttons</h2>
+            <button class="modern-btn" onclick="redirectToGoogle()">Modern Button</button>
+            <button class="outline-btn" onclick="redirectToGoogle()">Outline Button</button>
+            <button class="large-btn" onclick="redirectToGoogle()">Large Button</button>
+            <button class="ghost-btn" onclick="redirectToGoogle()">Ghost Button</button>
+        </div>
+        
+        <!-- Special Effect Buttons -->
+        <div class="button-section">
+            <h2>Special Effects</h2>
+            <button class="animated-btn" onclick="redirectToGoogle()">Animated Button</button>
+            <button class="btn-3d" onclick="redirectToGoogle()">3D Button</button>
+            <button class="icon-btn" onclick="redirectToGoogle()">Icon Button</button>
+        </div>
+        
+        <!-- Alternative Clickable Elements -->
+        <div class="button-section">
+            <h2>Alternative Clickable Elements</h2>
+            <a href="https://google.com" class="link-btn" target="_blank">Link as Button</a>
+            
+            <button class="image-btn" onclick="redirectToGoogle()">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iNDAiIGZpbGw9IiM0Mjg1ZjQiIHJ4PSI1Ii8+PHRleHQgeD0iNTAiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbWFnZSBCdG48L3RleHQ+PC9zdmc+" alt="Image Button">
+            </button>
+            
+            <div style="background-color: #34a853; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; cursor: pointer; margin: 5px;" onclick="redirectToGoogle()">
+                Div as Button
+            </div>
+        </div>
+        
+        <!-- Form Buttons -->
+        <div class="button-section">
+            <h2>Form Buttons</h2>
+            <form onsubmit="event.preventDefault(); redirectToGoogle();">
+                <input type="submit" value="Submit Button" class="basic-btn">
+                <input type="button" value="Input Button" class="outline-btn" onclick="redirectToGoogle()">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function redirectToGoogle() {
+            window.location.href = 'https://google.com';
+        }
+        
+        // Alternative method using target="_blank" to open in new tab
+        function openGoogleNewTab() {
+            window.open('https://google.com', '_blank');
+        }
+    </script>
 </body>
 </html>
