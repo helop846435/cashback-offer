@@ -18,7 +18,7 @@
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +36,7 @@
         .header {
             background: linear-gradient(90deg, #0d3b8c 0%, #1e4fa1 50%, #0d3b8c 100%);
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -53,13 +53,13 @@
         }
         
         .header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         
         .header p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -69,80 +69,85 @@
             display: inline-block;
             background: #e31837;
             color: white;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 8px;
             animation: pulse 2s infinite;
         }
         
         .content {
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
         
         .offer-section {
             background: #f8f9fa;
             border-radius: 10px;
-            padding: 15px;
+            padding: 12px;
             border-left: 5px solid #0d3b8c;
         }
         
         .offer-section h2 {
             color: #0d3b8c;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 1.2rem;
+            gap: 6px;
+            font-size: 1.1rem;
         }
         
         .offer-section h2 i {
             color: #e31837;
         }
         
+        .offer-section p {
+            font-size: 0.85rem;
+        }
+        
         .benefits {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin: 10px 0;
+            gap: 8px;
+            margin: 8px 0;
         }
         
         .benefit-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px;
+            gap: 6px;
+            padding: 6px;
             background: white;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         .benefit-item i {
             color: #0d3b8c;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            flex-shrink: 0;
         }
         
         .countdown {
             background: #e31837;
             color: white;
             text-align: center;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 10px 0;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 8px 0;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .buttons-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 12px;
         }
         
         .offer-btn {
@@ -150,18 +155,18 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 5px;
-            padding: 12px 8px;
+            gap: 4px;
+            padding: 8px 6px;
             border: none;
-            border-radius: 8px;
-            font-size: 0.9rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
             text-decoration: none;
             color: white;
-            min-height: 70px;
+            min-height: 60px;
             position: relative;
         }
         
@@ -171,23 +176,23 @@
         }
         
         .offer-btn i {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         
         .btn-number {
             position: absolute;
-            top: -8px;
-            right: -8px;
+            top: -6px;
+            right: -6px;
             background: #ffd700;
             color: #0d3b8c;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             border: 2px solid white;
         }
@@ -210,8 +215,8 @@
         
         .testimonial {
             background: white;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 8px;
+            padding: 12px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             border-top: 3px solid #0d3b8c;
         }
@@ -219,54 +224,55 @@
         .testimonial-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
         }
         
         .testimonial-avatar {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             background: #0d3b8c;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
         
         .testimonial-text {
             font-style: italic;
             color: #555;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         .testimonial-name {
             font-weight: bold;
-            margin-top: 8px;
+            margin-top: 6px;
             color: #0d3b8c;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         .footer {
             background: #0d3b8c;
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 0.8rem;
+            padding: 12px;
+            font-size: 0.75rem;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 8px;
+            gap: 12px;
+            margin-top: 6px;
         }
         
         .footer-links a {
             color: #a8c6ff;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
         
         .footer-links a:hover {
@@ -280,31 +286,118 @@
             100% { transform: scale(1); }
         }
         
+        /* Mobile-specific optimizations */
         @media (max-width: 768px) {
-            .buttons-grid {
-                grid-template-columns: repeat(2, 1fr);
+            body {
+                padding: 5px;
             }
             
-            .benefits {
-                grid-template-columns: 1fr;
+            .container {
+                border-radius: 10px;
             }
             
-            .header h1 {
-                font-size: 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .buttons-grid {
-                grid-template-columns: 1fr;
+            .header {
+                padding: 12px;
             }
             
             .header h1 {
                 font-size: 1.3rem;
             }
             
+            .header p {
+                font-size: 0.8rem;
+            }
+            
             .content {
-                padding: 15px;
+                padding: 10px;
+                gap: 10px;
+            }
+            
+            .offer-section {
+                padding: 10px;
+            }
+            
+            .buttons-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 6px;
+            }
+            
+            .offer-btn {
+                padding: 6px 4px;
+                font-size: 0.7rem;
+                min-height: 55px;
+            }
+            
+            .offer-btn i {
+                font-size: 0.9rem;
+            }
+            
+            .btn-number {
+                width: 18px;
+                height: 18px;
+                font-size: 0.65rem;
+                top: -5px;
+                right: -5px;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .buttons-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 4px;
+            }
+            
+            .offer-btn {
+                padding: 5px 3px;
+                font-size: 0.65rem;
+                min-height: 50px;
+            }
+            
+            .offer-btn i {
+                font-size: 0.8rem;
+            }
+            
+            .btn-number {
+                width: 16px;
+                height: 16px;
+                font-size: 0.6rem;
+                top: -4px;
+                right: -4px;
+            }
+            
+            .header h1 {
+                font-size: 1.1rem;
+            }
+            
+            .content {
+                padding: 8px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .buttons-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 3px;
+            }
+            
+            .offer-btn {
+                padding: 4px 2px;
+                font-size: 0.6rem;
+                min-height: 45px;
+            }
+            
+            .offer-btn i {
+                font-size: 0.7rem;
+            }
+            
+            .btn-number {
+                width: 14px;
+                height: 14px;
+                font-size: 0.55rem;
             }
         }
     </style>
