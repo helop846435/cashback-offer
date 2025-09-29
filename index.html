@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limited Time Offers</title>
+    <title>Premium Exclusive Offers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,11 +14,11 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0c2e5e 0%, #1a3b7a 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 10px;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,15 +28,15 @@
             width: 100%;
             max-width: 1100px;
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
         
         .header {
-            background: linear-gradient(90deg, #0d3b8c 0%, #1e4fa1 50%, #0d3b8c 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
             color: white;
-            padding: 15px;
+            padding: 25px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -48,82 +48,86 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            height: 6px;
+            background: linear-gradient(90deg, #ffd93d, #ff9a3d, #ff6b6b);
         }
         
         .header h1 {
-            font-size: 1.5rem;
-            margin-bottom: 6px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
         
         .header p {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
         }
         
         .badge {
             display: inline-block;
-            background: #e31837;
+            background: #4ecdc4;
             color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: bold;
-            margin-top: 8px;
+            margin-top: 12px;
             animation: pulse 2s infinite;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
         .content {
-            padding: 15px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 20px;
         }
         
         .offer-section {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 12px;
-            border-left: 5px solid #0d3b8c;
+            background: linear-gradient(to bottom, #f9f7fe, #f0edfc);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 6px solid #ff6b6b;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .offer-section h2 {
-            color: #0d3b8c;
-            margin-bottom: 8px;
+            color: #6c63ff;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 1.1rem;
+            gap: 10px;
+            font-size: 1.4rem;
         }
         
         .offer-section h2 i {
-            color: #e31837;
+            color: #ff6b6b;
         }
         
         .offer-section p {
-            font-size: 0.85rem;
+            font-size: 1rem;
+            color: #555;
         }
         
         .countdown {
-            background: #e31837;
+            background: linear-gradient(135deg, #6c63ff 0%, #8a84ff 100%);
             color: white;
             text-align: center;
-            padding: 8px;
-            border-radius: 6px;
-            margin: 8px 0;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
         }
         
         .buttons-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 8px;
-            margin-top: 12px;
+            gap: 12px;
+            margin-top: 20px;
         }
         
         .offer-btn {
@@ -131,83 +135,89 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
-            padding: 8px 6px;
+            gap: 8px;
+            padding: 12px 10px;
             border: none;
-            border-radius: 6px;
-            font-size: 0.8rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
             text-decoration: none;
             color: white;
-            min-height: 60px;
+            min-height: 80px;
             position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .offer-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         .offer-btn i {
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
         
         .btn-number {
             position: absolute;
-            top: -6px;
-            right: -6px;
-            background: #ffd700;
-            color: #0d3b8c;
-            width: 20px;
-            height: 20px;
+            top: -8px;
+            right: -8px;
+            background: #ffd93d;
+            color: #333;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 0.7rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 0.85rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
             border: 2px solid white;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #0d3b8c 0%, #1e4fa1 100%);
+            background: linear-gradient(135deg, #6c63ff 0%, #8a84ff 100%);
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #e31837 0%, #ff4d4d 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
         }
         
         .btn-accent {
-            background: linear-gradient(135deg, #ff8c00 0%, #ffaa42 100%);
+            background: linear-gradient(135deg, #4ecdc4 0%, #67e0c2 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
+            background: linear-gradient(135deg, #ff9a3d 0%, #ffb347 100%);
+        }
+        
+        .btn-special {
+            background: linear-gradient(135deg, #a166ab 0%, #c06cb3 100%);
         }
         
         .footer {
-            background: #0d3b8c;
+            background: linear-gradient(135deg, #6c63ff 0%, #8a84ff 100%);
             color: white;
             text-align: center;
-            padding: 12px;
-            font-size: 0.75rem;
+            padding: 18px;
+            font-size: 0.9rem;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-top: 6px;
+            gap: 18px;
+            margin-top: 10px;
         }
         
         .footer-links a {
-            color: #a8c6ff;
+            color: #d1ceff;
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
         
         .footer-links a:hover {
@@ -223,44 +233,90 @@
         
         /* Mobile-specific optimizations */
         @media (max-width: 768px) {
-            body {
-                padding: 5px;
-            }
-            
-            .container {
-                border-radius: 10px;
-            }
-            
-            .header {
-                padding: 12px;
+            .buttons-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 8px;
             }
             
             .header h1 {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
             
             .header p {
-                font-size: 0.8rem;
+                font-size: 0.95rem;
             }
             
             .content {
-                padding: 10px;
-                gap: 10px;
+                padding: 15px;
+                gap: 15px;
             }
             
             .offer-section {
-                padding: 10px;
+                padding: 15px;
             }
             
+            .offer-btn {
+                padding: 10px 8px;
+                font-size: 0.8rem;
+                min-height: 70px;
+            }
+            
+            .offer-btn i {
+                font-size: 1.1rem;
+            }
+            
+            .btn-number {
+                width: 22px;
+                height: 22px;
+                font-size: 0.75rem;
+                top: -7px;
+                right: -7px;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .buttons-grid {
                 grid-template-columns: repeat(5, 1fr);
                 gap: 6px;
             }
             
             .offer-btn {
-                padding: 6px 4px;
+                padding: 8px 6px;
+                font-size: 0.75rem;
+                min-height: 65px;
+            }
+            
+            .offer-btn i {
+                font-size: 1rem;
+            }
+            
+            .btn-number {
+                width: 20px;
+                height: 20px;
                 font-size: 0.7rem;
-                min-height: 55px;
+                top: -6px;
+                right: -6px;
+            }
+            
+            .header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .buttons-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 5px;
+            }
+            
+            .offer-btn {
+                padding: 7px 5px;
+                font-size: 0.7rem;
+                min-height: 60px;
             }
             
             .offer-btn i {
@@ -271,64 +327,6 @@
                 width: 18px;
                 height: 18px;
                 font-size: 0.65rem;
-                top: -5px;
-                right: -5px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .buttons-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 4px;
-            }
-            
-            .offer-btn {
-                padding: 5px 3px;
-                font-size: 0.65rem;
-                min-height: 50px;
-            }
-            
-            .offer-btn i {
-                font-size: 0.8rem;
-            }
-            
-            .btn-number {
-                width: 16px;
-                height: 16px;
-                font-size: 0.6rem;
-                top: -4px;
-                right: -4px;
-            }
-            
-            .header h1 {
-                font-size: 1.1rem;
-            }
-            
-            .content {
-                padding: 8px;
-            }
-        }
-        
-        @media (max-width: 360px) {
-            .buttons-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 3px;
-            }
-            
-            .offer-btn {
-                padding: 4px 2px;
-                font-size: 0.6rem;
-                min-height: 45px;
-            }
-            
-            .offer-btn i {
-                font-size: 0.7rem;
-            }
-            
-            .btn-number {
-                width: 14px;
-                height: 14px;
-                font-size: 0.55rem;
             }
         }
     </style>
@@ -336,15 +334,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1><i class="fas fa-flag-usa"></i> Exclusive Offers</h1>
-            <p>Limited Time Only - Act Now!</p>
-            <div class="badge">OFFICIAL PARTNER</div>
+            <h1><i class="fas fa-gem"></i> Premium Exclusive Offers</h1>
+            <p>Don't Miss Out - Limited Time Only!</p>
+            <div class="badge">VIP ACCESS</div>
         </div>
         
         <div class="content">
             <div class="offer-section">
-                <h2><i class="fas fa-gift"></i> Click Any Offer Below</h2>
-                <p>All buttons lead to exclusive opportunities. Choose your favorite!</p>
+                <h2><i class="fas fa-bolt"></i> Instant Access Offers</h2>
+                <p>Click any button below to claim your exclusive deal. Time is running out!</p>
                 
                 <div class="countdown">
                     <i class="fas fa-clock"></i> OFFERS EXPIRE IN: <span id="countdown-timer">23:59:59</span>
@@ -364,19 +362,19 @@
                     </a>
                     
                     <!-- BUTTON 3: Exclusive USA Deal -->
-                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
+                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-accent">
                         <span class="btn-number">3</span>
                         <i class="fas fa-star"></i> Exclusive USA Deal
                     </a>
                     
                     <!-- BUTTON 4: Grab Limited Offer -->
-                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-accent">
+                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
                         <span class="btn-number">4</span>
                         <i class="fas fa-bolt"></i> Grab Limited Offer
                     </a>
                     
                     <!-- BUTTON 5: Instant Cashback -->
-                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
+                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-special">
                         <span class="btn-number">5</span>
                         <i class="fas fa-money-bill-wave"></i> Instant Cashback
                     </a>
@@ -400,13 +398,13 @@
                     </a>
                     
                     <!-- BUTTON 9: Special Offer for Americans -->
-                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
+                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
                         <span class="btn-number">9</span>
                         <i class="fas fa-user-check"></i> Special Offer for Americans
                     </a>
                     
                     <!-- BUTTON 10: Start Saving Today -->
-                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
+                    <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-special">
                         <span class="btn-number">10</span>
                         <i class="fas fa-rocket"></i> Start Saving Today
                     </a>
@@ -414,17 +412,17 @@
             </div>
             
             <div class="offer-section">
-                <h2><i class="fas fa-bullhorn"></i> Why Choose Us?</h2>
-                <p>✓ Instant Access ✓ Exclusive Deals ✓ Limited Time</p>
+                <h2><i class="fas fa-crown"></i> Why You'll Love This</h2>
+                <p>✨ Premium Quality ✨ Instant Access ✨ Exclusive Deals</p>
             </div>
         </div>
         
         <div class="footer">
-            <p>© 2023 Exclusive Offers Network</p>
+            <p>© 2023 Premium Offers Network | Your Satisfaction Guaranteed</p>
             <div class="footer-links">
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
-                <a href="#">Contact</a>
+                <a href="#">Support</a>
             </div>
         </div>
     </div>
