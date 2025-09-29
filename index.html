@@ -14,11 +14,11 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: white;
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,7 +30,7 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
         
         .header {
@@ -233,9 +233,16 @@
         
         /* Mobile-specific optimizations */
         @media (max-width: 768px) {
-            .buttons-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 8px;
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 20px 15px;
             }
             
             .header h1 {
@@ -255,14 +262,44 @@
                 padding: 15px;
             }
             
+            .buttons-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
             .offer-btn {
-                padding: 10px 8px;
-                font-size: 0.8rem;
-                min-height: 70px;
+                padding: 15px 10px;
+                font-size: 0.9rem;
+                min-height: 85px;
             }
             
             .offer-btn i {
-                font-size: 1.1rem;
+                font-size: 1.4rem;
+            }
+            
+            .btn-number {
+                width: 24px;
+                height: 24px;
+                font-size: 0.8rem;
+                top: -8px;
+                right: -8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .buttons-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .offer-btn {
+                padding: 12px 8px;
+                font-size: 0.85rem;
+                min-height: 75px;
+            }
+            
+            .offer-btn i {
+                font-size: 1.2rem;
             }
             
             .btn-number {
@@ -272,31 +309,6 @@
                 top: -7px;
                 right: -7px;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .buttons-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 6px;
-            }
-            
-            .offer-btn {
-                padding: 8px 6px;
-                font-size: 0.75rem;
-                min-height: 65px;
-            }
-            
-            .offer-btn i {
-                font-size: 1rem;
-            }
-            
-            .btn-number {
-                width: 20px;
-                height: 20px;
-                font-size: 0.7rem;
-                top: -6px;
-                right: -6px;
-            }
             
             .header h1 {
                 font-size: 1.4rem;
@@ -304,29 +316,6 @@
             
             .content {
                 padding: 12px;
-            }
-        }
-        
-        @media (max-width: 360px) {
-            .buttons-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 5px;
-            }
-            
-            .offer-btn {
-                padding: 7px 5px;
-                font-size: 0.7rem;
-                min-height: 60px;
-            }
-            
-            .offer-btn i {
-                font-size: 0.9rem;
-            }
-            
-            .btn-number {
-                width: 18px;
-                height: 18px;
-                font-size: 0.65rem;
             }
         }
     </style>
