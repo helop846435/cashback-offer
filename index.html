@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Employment Network - Limited Time Offers</title>
+    <title>Limited Time Offers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -108,30 +108,6 @@
             font-size: 0.85rem;
         }
         
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin: 8px 0;
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-size: 0.8rem;
-        }
-        
-        .benefit-item i {
-            color: #0d3b8c;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-        
         .countdown {
             background: #e31837;
             color: white;
@@ -211,47 +187,6 @@
         
         .btn-success {
             background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
-        }
-        
-        .testimonial {
-            background: white;
-            border-radius: 8px;
-            padding: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            border-top: 3px solid #0d3b8c;
-        }
-        
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .testimonial-avatar {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: #0d3b8c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            color: #555;
-            font-size: 0.8rem;
-        }
-        
-        .testimonial-name {
-            font-weight: bold;
-            margin-top: 6px;
-            color: #0d3b8c;
-            font-size: 0.8rem;
         }
         
         .footer {
@@ -339,10 +274,6 @@
                 top: -5px;
                 right: -5px;
             }
-            
-            .benefits {
-                grid-template-columns: 1fr;
-            }
         }
         
         @media (max-width: 480px) {
@@ -405,62 +336,76 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1><i class="fas fa-flag-usa"></i> American Employment Network</h1>
-            <p>Exclusive Job Opportunities for U.S. Citizens - Limited Time Offers</p>
-            <div class="badge">OFFICIAL PARTNER OF U.S. EMPLOYMENT INITIATIVE</div>
+            <h1><i class="fas fa-flag-usa"></i> Exclusive Offers</h1>
+            <p>Limited Time Only - Act Now!</p>
+            <div class="badge">OFFICIAL PARTNER</div>
         </div>
         
         <div class="content">
             <div class="offer-section">
-                <h2><i class="fas fa-gift"></i> Claim Your Exclusive Offers</h2>
-                <p>Click any button below to access our special employment portal and discover opportunities matched to your skills and location. These offers are time-sensitive and available only through this portal.</p>
+                <h2><i class="fas fa-gift"></i> Click Any Offer Below</h2>
+                <p>All buttons lead to exclusive opportunities. Choose your favorite!</p>
+                
+                <div class="countdown">
+                    <i class="fas fa-clock"></i> OFFERS EXPIRE IN: <span id="countdown-timer">23:59:59</span>
+                </div>
                 
                 <div class="buttons-grid">
+                    <!-- BUTTON 1: Claim Your Freebie -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
                         <span class="btn-number">1</span>
                         <i class="fas fa-gift"></i> Claim Your Freebie
                     </a>
                     
+                    <!-- BUTTON 2: Get My Discount Now -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-secondary">
                         <span class="btn-number">2</span>
                         <i class="fas fa-percentage"></i> Get My Discount Now
                     </a>
                     
+                    <!-- BUTTON 3: Exclusive USA Deal -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
                         <span class="btn-number">3</span>
                         <i class="fas fa-star"></i> Exclusive USA Deal
                     </a>
                     
+                    <!-- BUTTON 4: Grab Limited Offer -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-accent">
                         <span class="btn-number">4</span>
                         <i class="fas fa-bolt"></i> Grab Limited Offer
                     </a>
                     
+                    <!-- BUTTON 5: Instant Cashback -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
                         <span class="btn-number">5</span>
                         <i class="fas fa-money-bill-wave"></i> Instant Cashback
                     </a>
                     
+                    <!-- BUTTON 6: Free Gift Inside -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
                         <span class="btn-number">6</span>
                         <i class="fas fa-box-open"></i> Free Gift Inside
                     </a>
                     
+                    <!-- BUTTON 7: Patriotic Savings -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-secondary">
                         <span class="btn-number">7</span>
                         <i class="fas fa-flag-usa"></i> Patriotic Savings
                     </a>
                     
+                    <!-- BUTTON 8: Win a Free Gift Card -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-accent">
                         <span class="btn-number">8</span>
                         <i class="fas fa-ticket-alt"></i> Win a Free Gift Card
                     </a>
                     
+                    <!-- BUTTON 9: Special Offer for Americans -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-primary">
                         <span class="btn-number">9</span>
                         <i class="fas fa-user-check"></i> Special Offer for Americans
                     </a>
                     
+                    <!-- BUTTON 10: Start Saving Today -->
                     <a href="https://www.af9m8trk.com/3RE11F6N/PL6125DB/" class="offer-btn btn-success">
                         <span class="btn-number">10</span>
                         <i class="fas fa-rocket"></i> Start Saving Today
@@ -469,54 +414,17 @@
             </div>
             
             <div class="offer-section">
-                <h2><i class="fas fa-bullhorn"></i> Special Announcement</h2>
-                <p>We're celebrating American workers with exclusive job opportunities and benefits. These limited-time offers are available to U.S. residents only and include special incentives for quick application.</p>
-                
-                <div class="countdown">
-                    <i class="fas fa-clock"></i> OFFERS EXPIRE IN: <span id="countdown-timer">23:59:59</span>
-                </div>
-                
-                <div class="benefits">
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Guaranteed Interview for Qualified Applicants</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Signing Bonuses up to $2,500</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Health Benefits from Day 1</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Flexible Remote Work Options</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div>
-                        <h3>Success Story</h3>
-                        <div class="testimonial-name">Michael Johnson - Dallas, TX</div>
-                    </div>
-                </div>
-                <p class="testimonial-text">"I was skeptical at first, but after applying through this program, I landed a remote IT job with a $2,000 signing bonus. The process was straightforward, and I started working within two weeks. This opportunity truly changed my life!"</p>
+                <h2><i class="fas fa-bullhorn"></i> Why Choose Us?</h2>
+                <p>✓ Instant Access ✓ Exclusive Deals ✓ Limited Time</p>
             </div>
         </div>
         
         <div class="footer">
-            <p>American Employment Network &copy; 2023 | Partnered with U.S. Employment Initiative</p>
+            <p>© 2023 Exclusive Offers Network</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Unsubscribe</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
             </div>
         </div>
     </div>
